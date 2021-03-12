@@ -1,0 +1,2 @@
+# CurlGen
+Automatic cURLcommand generator
