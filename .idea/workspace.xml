@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/CurlDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/CurlGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/HttpRequestCurlCommandBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/ICurlCommandBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/CurlDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/HttpRequestCurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/HttpRequestCurlCommandBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +22,25 @@
       <executable />
     </execution>
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,18 +68,52 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.CS540_Bhuvana_Sridhara_Project_CurlGen">
+    <configuration name="CurlDemo" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CurlDemo" />
+      <module name="CurlGen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CS540_Bhuvana_Sridhara_Project_CurlGen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CS540_Bhuvana_Sridhara_Project_CurlGen" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
@@ -90,7 +135,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617382824607</updated>
-      <workItem from="1617382832578" duration="1217000" />
+      <workItem from="1617382832578" duration="2224000" />
+      <workItem from="1617904549633" duration="183000" />
+      <workItem from="1617918312955" duration="1919000" />
+      <workItem from="1617933906858" duration="2370000" />
+      <workItem from="1617985802032" duration="1520000" />
     </task>
     <servers />
   </component>
@@ -101,13 +150,79 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="115" width="811" height="669" key="#Project_Structure" timestamp="1617382963400">
+    <state x="396" y="127" key="#CurlDemo" timestamp="1617933660872">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" width="811" height="669" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1617382963400" />
-    <state x="97" y="72" key="new project wizard" timestamp="1617382930058">
+    <state x="396" y="127" key="#CurlDemo/0.0.1440.900@0.0.1440.900" timestamp="1617933660872" />
+    <state x="320" y="115" width="811" height="669" key="#Project_Structure" timestamp="1617933289495">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="320" y="115" width="811" height="669" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1617933289495" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617933882667">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933882667" />
+    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1617933701815">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933701815" />
+    <state x="457" y="241" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617933556153">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="457" y="241" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933556153" />
+    <state x="475" y="222" key="EnvironmentVariablesDialog" timestamp="1617933647346">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="475" y="222" key="EnvironmentVariablesDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933647346" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1617985778381">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778381" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617934592184" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1617985778380">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778380" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1617934592182" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1617985778378">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778378" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1617934592182" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1617985778381">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778381" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1617934592183" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1617933891384">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1617933891384">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1617933891383">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1617933891383" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1617933891384">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1617985707318">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985707318" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900/1440.-86.1920.1057@0.0.1440.900" timestamp="1617985315212" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1617933819486" />
+    <state x="97" y="72" key="new project wizard" timestamp="1617985958056">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="97" y="72" key="new project wizard/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985958056" />
     <state x="97" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1617382930058" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS540_Bhuvana_Sridhara_Project_CurlGen$CurlDemo.ic" NAME="CurlDemo Coverage Results" MODIFIED="1617933449732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
