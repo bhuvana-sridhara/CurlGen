@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurlGen/src/configs/options.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/ICurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/ICurlCommandBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -90,6 +94,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CS540_Bhuvana_Sridhara_Project_CurlGen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -104,7 +119,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -113,16 +130,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SbtLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/Downloads/android-vertical-stepper-view-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../MoCaPro" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../harish_venkataraman_project" value="PREVIEW" />
-        <entry key="/Volumes/Extreme SSD/projects/MoCaPro/MoCaPro" value="PREVIEW" />
-      </map>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -138,87 +146,38 @@
       <workItem from="1617918312955" duration="1919000" />
       <workItem from="1617933906858" duration="2370000" />
       <workItem from="1617985802032" duration="2517000" />
+      <workItem from="1618081850937" duration="11445000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature-prajwalkk" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="396" y="127" key="#CurlDemo" timestamp="1617933660872">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="396" y="127" key="#CurlDemo/0.0.1440.900@0.0.1440.900" timestamp="1617933660872" />
-    <state x="320" y="115" width="811" height="669" key="#Project_Structure" timestamp="1617933289495">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="115" width="811" height="669" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1617933289495" />
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617933882667">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933882667" />
-    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1617933701815">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933701815" />
-    <state x="457" y="241" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617933556153">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="457" y="241" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933556153" />
-    <state x="475" y="222" key="EnvironmentVariablesDialog" timestamp="1617933647346">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="475" y="222" key="EnvironmentVariablesDialog/0.0.1440.900@0.0.1440.900" timestamp="1617933647346" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1617985778381">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778381" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617934592184" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1617985778380">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778380" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1617934592182" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1617985778378">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778378" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1617934592182" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1617985778381">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985778381" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1617934592183" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1617933891384">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1617933891384">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1617933891383">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1617933891383" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1617933891384">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1617933891384" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1617985707318">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985707318" />
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900/1440.-86.1920.1057@0.0.1440.900" timestamp="1617985315212" />
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1617933819486" />
-    <state x="97" y="72" key="new project wizard" timestamp="1617985958056">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="97" y="72" key="new project wizard/0.0.1440.900/1440.-109.1920.1080@0.0.1440.900" timestamp="1617985958056" />
-    <state x="97" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1617382930058" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS540_Bhuvana_Sridhara_Project_CurlGen$CurlDemo.ic" NAME="CurlDemo Coverage Results" MODIFIED="1617933449732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
