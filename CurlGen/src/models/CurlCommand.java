@@ -21,7 +21,7 @@ public class CurlCommand {
     }
 
     public Map<String, String> addOption(String option, String[] values) {
-        this.options.put(option, values.toString());
+        this.options.put(option, values.toString()); // TODO
         return options;
     }
 
@@ -42,8 +42,11 @@ public class CurlCommand {
         return "";
     }
 
-    public List<String> getOptions() {
+    public String getUrl() {
+        return url;
+    }
 
+    public Map<String, String> getOptions() {
         return options;
     }
 
@@ -62,5 +65,7 @@ public class CurlCommand {
         return "";
     }
 
-
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
