@@ -1,9 +1,6 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CurlCommand {
 
@@ -13,10 +10,30 @@ public class CurlCommand {
             "--header", "10",
             "--data-raw", "51"
     );
-    private final List<String> options = new ArrayList<String>();
-    private final Map<String, String> headers = new LinkedHashMap<String, String>();
-    private final List<String> locations = new ArrayList<String>(4);
+    private String url;
+    private Map<String, String> options = new LinkedHashMap<>();
+    private Map<String, String> headers = new LinkedHashMap<>();
+    private List<String> locations = new ArrayList<>(4);
 
+    public void setOptions(Map<String, String> options) {
+        // TODO
+        this.options = options;
+    }
+
+    public Map<String, String> addOption(String option, String[] values) {
+        this.options.put(option, values.toString());
+        return options;
+    }
+
+    public void setHeaders(Map<String, String> headers) {
+        // TODO
+        this.headers = headers;
+    }
+
+    public void setLocations(List<String> locations) {
+        // TODO
+        this.locations = locations;
+    }
 
     public String getCommand() {
         StringBuilder cc = new StringBuilder();
@@ -24,7 +41,7 @@ public class CurlCommand {
 
         return "";
     }
-    
+
     public List<String> getOptions() {
 
         return options;
@@ -44,4 +61,6 @@ public class CurlCommand {
         // TODO
         return "";
     }
+
+
 }
