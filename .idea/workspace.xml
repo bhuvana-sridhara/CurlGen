@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/configs/options.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurlGen/src/ICurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/ICurlCommandBuilder.java" afterDir="false" />
-    </list>
+    <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +139,7 @@
       <workItem from="1617918312955" duration="1919000" />
       <workItem from="1617933906858" duration="2370000" />
       <workItem from="1617985802032" duration="2517000" />
-      <workItem from="1618081850937" duration="11445000" />
+      <workItem from="1618081850937" duration="12116000" />
     </task>
     <servers />
   </component>
