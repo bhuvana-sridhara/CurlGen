@@ -11,9 +11,15 @@ public class CurlCommand {
             "--data-raw", "51"
     );
     private String url;
-    private Map<String, String> options = new LinkedHashMap<>();
-    private Map<String, String> headers = new LinkedHashMap<>();
-    private List<String> locations = new ArrayList<>(4);
+    private Map<String, String> options;
+    private Map<String, String> headers;
+    private List<String> locations;
+
+    public CurlCommand() {
+        this.options = new LinkedHashMap<>();
+        this.headers = new LinkedHashMap<>();
+        this.locations = new ArrayList<>(4);
+    }
 
     public void setOptions(Map<String, String> options) {
         // TODO

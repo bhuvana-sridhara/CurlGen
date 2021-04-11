@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CurlGen/src/exceptions/InvalidUrlFormatException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,7 @@
       <workItem from="1617918312955" duration="1919000" />
       <workItem from="1617933906858" duration="2370000" />
       <workItem from="1617985802032" duration="2517000" />
-      <workItem from="1618081850937" duration="16325000" />
+      <workItem from="1618081850937" duration="16762000" />
     </task>
     <servers />
   </component>
