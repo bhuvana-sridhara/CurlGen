@@ -2,19 +2,27 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'org.cs540.curlgen'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src']
-        }
-    }
-}
+//sourceSets {
+//    main {
+//        java {
+//            srcDirs = ['main/java']
+//        }
+//        resources {
+//            srcDirs = ["main/resources"]
+//        }
+//
+//    }
+//    test {
+//        srcDirs = ["test/java"]
+//    }
+//}
+
 dependencies {
     compile 'junit:junit:4.12'
     // https://mvnrepository.com/artifact/com.typesafe/config

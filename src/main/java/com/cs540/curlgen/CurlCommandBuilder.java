@@ -1,5 +1,9 @@
-import exceptions.InvalidUrlFormatException;
-import models.CurlCommand;
+package com.cs540.curlgen;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
+import com.cs540.curlgen.models.CurlCommand;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,10 +11,13 @@ import java.util.regex.Pattern;
 public class CurlCommandBuilder implements ICurlCommandBuilder {
 
     private CurlCommand curlCommand;
+    private Config curlConfig;
 
     public CurlCommandBuilder() {
         this.curlCommand = new CurlCommand();
         // We will be needing to extract a custom object and details from it
+
+        this.curlConfig = ConfigFactory.parseResources("curloptions.conf");
     }
 
     @Override

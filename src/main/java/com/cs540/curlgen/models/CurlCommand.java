@@ -1,4 +1,4 @@
-package models;
+package com.cs540.curlgen.models;
 
 import java.util.*;
 

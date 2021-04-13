@@ -1,4 +1,4 @@
-package exceptions;
+package com.cs540.curlgen.exceptions;
 /*
  *
  * Created by: prajw
