@@ -1,4 +1,4 @@
-# com.cs540.curlgen.CurlGen
+# CurlGen
 Automatic cURLcommand generator library
 
 ### Team: 
