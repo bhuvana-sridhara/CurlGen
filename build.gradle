@@ -17,4 +17,7 @@ sourceSets {
 }
 dependencies {
     compile 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/com.typesafe/config
+    implementation group: 'com.typesafe', name: 'config', version: '1.4.1'
+
 }

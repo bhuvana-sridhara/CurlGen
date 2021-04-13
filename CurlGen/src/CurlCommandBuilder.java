@@ -10,6 +10,7 @@ public class CurlCommandBuilder implements ICurlCommandBuilder {
 
     public CurlCommandBuilder() {
         this.curlCommand = new CurlCommand();
+        // We will be needing to extract a custom object and details from it
     }
 
     @Override
@@ -23,8 +24,15 @@ public class CurlCommandBuilder implements ICurlCommandBuilder {
 
     public void buildOptions() {
         //TODO --request GET POST PUT DELETE UPDATE
+        if(true /* TODO the custom object contains a request type) */ )
+        buildRequestOption("GET");
 
         // TODO --data-raw
+    }
+
+    private void buildRequestOption(String command) {
+
+        curlCommand.addOption("--request", command );
     }
 
     public void buildUrl(String url) {

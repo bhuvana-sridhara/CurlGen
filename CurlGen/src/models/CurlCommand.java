@@ -23,11 +23,12 @@ public class CurlCommand {
 
     public void setOptions(Map<String, String> options) {
         // TODO
+
         this.options = options;
     }
 
-    public Map<String, String> addOption(String option, String[] values) {
-        this.options.put(option, values.toString()); // TODO
+    public Map<String, String> addOption(String option, String value) {
+        this.options.put(option, value); // TODO
         return options;
     }
 

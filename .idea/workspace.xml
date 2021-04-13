@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcad572b-6c01-44e9-8486-2212e44f92d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CurlGen/src/resources/curloptions.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/CurlCommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurlGen/src/configs/options.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/CurlGen/src/models/CurlCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +95,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,12 +149,16 @@
       <workItem from="1617918312955" duration="1919000" />
       <workItem from="1617933906858" duration="2370000" />
       <workItem from="1617985802032" duration="2517000" />
-      <workItem from="1618081850937" duration="16762000" />
+      <workItem from="1618081850937" duration="17949000" />
+      <workItem from="1618250318251" duration="12802000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -172,6 +182,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
