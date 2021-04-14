@@ -4,4 +4,6 @@ import com.cs540.curlgen.models.CurlCommand;
 
 public interface ICurlCommandBuilder {
     public CurlCommand GenerateCommand();
+
+
 }

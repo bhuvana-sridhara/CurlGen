@@ -8,51 +8,33 @@ import com.cs540.curlgen.models.CurlCommand;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CurlCommandBuilder implements ICurlCommandBuilder {
+public abstract class CurlCommandBuilder implements ICurlCommandBuilder {
 
     private CurlCommand curlCommand;
     private Config curlConfig;
+
 
     public CurlCommandBuilder() {
         this.curlCommand = new CurlCommand();
         // We will be needing to extract a custom object and details from it
 
+        // The below config object stores the curl commands in a HOCON file to model a curl command
         this.curlConfig = ConfigFactory.parseResources("curloptions.conf");
+        System.out.println(this.curlConfig.toString());
     }
+
 
     @Override
     public CurlCommand GenerateCommand() {
         return this.curlCommand;
     }
 
-    public void buildHeaders() {
-        // TODO --header which is a MAP<String, String> and convert to JSON format
-    }
 
-    public void buildOptions() {
-        //TODO --request GET POST PUT DELETE UPDATE
-        if(true /* TODO the custom object contains a request type) */ )
-        buildRequestOption("GET");
+    public abstract void buildHeaders();
 
-        // TODO --data-raw
-    }
+    public abstract void buildOptions();
 
-    private void buildRequestOption(String command) {
-
-        curlCommand.addOption("--request", command );
-    }
-
-    public void buildUrl(String url) {
-        // TODO add url
-        try {
-            isValidUrl(url);
-        } catch (InvalidUrlFormatException e) {
-            System.err.println(e);
-            System.exit(-1);
-        }
-
-
-    }
+    public abstract void buildUrl(String url);
 
     private static boolean isValidUrl(String url) throws InvalidUrlFormatException {
         String regex = "((http|https)://)(www.)?"
