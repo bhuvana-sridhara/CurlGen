@@ -1,36 +1,50 @@
 package com.cs540.curlgen;
 
+import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import com.cs540.curlgen.models.CurlCommand;
+import com.cs540.curlgen.models.Option;
 import com.typesafe.config.Config;
 
-public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder{
+import java.net.http.HttpRequest;
+import java.util.List;
+import java.util.Map;
 
-    private CurlCommand curlCommand;
-    private Config curlConfig;
+public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
 
-    @Override
-    public CurlCommand GenerateCommand() {
-        return super.GenerateCommand();
-    }
+    private final HttpRequest httpRequest;
 
-    public HttpRequestCurlCommandBuilder() {
+    public HttpRequestCurlCommandBuilder(HttpRequest httpRequest) throws InvalidUrlFormatException {
         super();
+        this.httpRequest = httpRequest;
+        buildUrl();
+        buildHeaders();
+        buildOptions();
     }
 
     @Override
     public void buildHeaders() {
+        Map<String, List<String>> headers = this.httpRequest.headers().map();
+        for (Map.Entry<String, List<String>> header : headers.entrySet()) {
+            for (String value : header.getValue()) {
 
+                this.curlCommand.addHeader(header.getKey(), value);
+                // Adding only the first value from the list
+                break;
+            }
+        }
     }
 
     @Override
     public void buildOptions() {
-
+        if (this.httpRequest.timeout().isPresent()) {
+            // Add timeout option
+            this.curlCommand.addOption(Option.TIMEOUT, String.valueOf(this.httpRequest.timeout().get().toSeconds()));
+        }
     }
 
-
     @Override
-    public void buildUrl(String url) {
-
+    public void buildUrl() throws InvalidUrlFormatException {
+        this.curlCommand.setUrl(this.httpRequest.uri().toString());
     }
 
 

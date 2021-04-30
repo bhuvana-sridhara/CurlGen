@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 
 public abstract class CurlCommandBuilder implements ICurlCommandBuilder {
 
-    private CurlCommand curlCommand;
-    private Config curlConfig;
+    protected CurlCommand curlCommand;
+    protected Config curlConfig;
 
 
     public CurlCommandBuilder() {
@@ -20,13 +20,12 @@ public abstract class CurlCommandBuilder implements ICurlCommandBuilder {
 
         // The below config object stores the curl commands in a HOCON file to model a curl command
         this.curlConfig = ConfigFactory.parseResources("curloptions.conf");
-        System.out.println(this.curlConfig.toString());
+        //System.out.println(this.curlConfig.toString());
     }
 
 
-    @Override
-    public CurlCommand GenerateCommand() {
-        return this.curlCommand;
+    public String GenerateCommand() {
+        return this.curlCommand.getCurlCommand();
     }
 
 
@@ -34,24 +33,7 @@ public abstract class CurlCommandBuilder implements ICurlCommandBuilder {
 
     public abstract void buildOptions();
 
-    public abstract void buildUrl(String url);
+    public abstract void buildUrl() throws InvalidUrlFormatException;
 
-    private static boolean isValidUrl(String url) throws InvalidUrlFormatException {
-        String regex = "((http|https)://)(www.)?"
-                + "[a-zA-Z0-9@:%._\\+~#?&//=]"
-                + "{2,256}\\.[a-z]"
-                + "{2,6}\\b([-a-zA-Z0-9@:%"
-                + "._\\+~#?&//=]*)";
-
-        Pattern pattern = Pattern.compile(regex);
-        if (url == null) {
-            throw new InvalidUrlFormatException("No URL Found. Please check the URL and run again");
-        }
-        Matcher matcher = pattern.matcher(url);
-        if (!matcher.matches())
-            throw new InvalidUrlFormatException("Bad URL. Please check the URL and run again. URL: " + url);
-        else
-            return true;
-    }
 
 }
