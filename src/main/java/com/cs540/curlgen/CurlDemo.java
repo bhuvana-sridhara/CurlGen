@@ -11,7 +11,6 @@ import java.time.Duration;
 
 public class CurlDemo {
 
-
     public void userCode() {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -25,21 +24,6 @@ public class CurlDemo {
                 .thenApply(HttpResponse::body)
                 .thenAccept(System.out::println)
                 .join();
-
-//        System.out.println("URL TEST");
-//        System.out.println(request.uri().toString());
-//        System.out.println("URL TEST OVER");
-//
-//        System.out.println("HEADER TEST");
-//        Map<String, List<String>> a = request.headers().map();
-//        for (Map.Entry<String, List<String>> b : a.entrySet()) {
-//            System.out.println(b.getKey());
-//            System.out.println("List");
-//            for (String c : b.getValue()) {
-//                System.out.println(c);
-//            }
-//        }
-//        System.out.println("HEADER TEST OVER");
 
         try {
             CurlGen obj = new CurlGen(new HttpRequestCurlCommandBuilder(request));

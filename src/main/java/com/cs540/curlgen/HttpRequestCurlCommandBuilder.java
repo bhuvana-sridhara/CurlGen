@@ -1,9 +1,7 @@
 package com.cs540.curlgen;
 
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
-import com.cs540.curlgen.models.CurlCommand;
 import com.cs540.curlgen.models.Option;
-import com.typesafe.config.Config;
 
 import java.net.http.HttpRequest;
 import java.util.List;
@@ -40,6 +38,9 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
             // Add timeout option
             this.curlCommand.addOption(Option.TIMEOUT, String.valueOf(this.httpRequest.timeout().get().toSeconds()));
         }
+
+        // Set the request method type as an option
+        this.curlCommand.addOption(Option.METHOD, this.httpRequest.method());
     }
 
     @Override
@@ -48,7 +49,4 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
     }
 
 
-    public void buildRequestOption(String command) {
-
-    }
 }

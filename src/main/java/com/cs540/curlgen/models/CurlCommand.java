@@ -11,12 +11,10 @@ public class CurlCommand {
     private String url;
     private final Map<Option, String> options;
     private final Map<String, String> headers;
-    private List<String> locations;
 
     public CurlCommand() {
         this.options = new LinkedHashMap<>();
         this.headers = new LinkedHashMap<>();
-        this.locations = new ArrayList<>(4);
     }
 
 
@@ -45,7 +43,6 @@ public class CurlCommand {
 
 
     // Headers Section
-    // TODO Consider multiple values per key, need to convert to array
     public void addHeaders(Map<String, String> headers) {
         for (Map.Entry<String, String> header : headers.entrySet()) {
             this.headers.put(header.getKey(), header.getValue());
@@ -66,18 +63,6 @@ public class CurlCommand {
 
     public String removeHeader(String header) {
         return this.headers.remove(header);
-    }
-
-
-    // Locations Section
-    public void setLocations(List<String> locations) {
-        // TODO
-        this.locations = locations;
-    }
-
-    public List<String> getLocations() {
-        // TODO
-        return locations;
     }
 
 
