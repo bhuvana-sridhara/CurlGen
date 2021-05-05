@@ -1,5 +1,5 @@
-import com.cs540.curlgen.CurlGen;
-import com.cs540.curlgen.OkhttpRequestCurlCommandBuilder;
+import com.cs540.curlgen.builder.CurlGen;
+import com.cs540.curlgen.builder.OkhttpRequestCurlCommandBuilder;
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;

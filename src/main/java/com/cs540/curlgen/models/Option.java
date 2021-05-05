@@ -1,5 +1,8 @@
 package com.cs540.curlgen.models;
 
+/**
+ * An enumerator to map the Option's generic name to the curl option name
+ */
 public enum Option {
     COMPRESSED("--compressed"),
     TIMEOUT("--connect-timeout"),

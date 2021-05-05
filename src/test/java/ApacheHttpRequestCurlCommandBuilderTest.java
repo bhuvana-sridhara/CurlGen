@@ -1,5 +1,5 @@
-import com.cs540.curlgen.ApacheHttpRequestCurlCommandBuilder;
-import com.cs540.curlgen.CurlGen;
+import com.cs540.curlgen.builder.ApacheHttpRequestCurlCommandBuilder;
+import com.cs540.curlgen.builder.CurlGen;
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.config.RequestConfig;
