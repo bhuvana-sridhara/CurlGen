@@ -1,6 +1,9 @@
 package com.cs540.curlgen.models;
 
+import com.cs540.curlgen.builder.HttpRequestCurlCommandBuilder;
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -12,6 +15,8 @@ import java.util.regex.Pattern;
  * Can be used directly by the client if they have a json/xml etc. with url,headers data and need to generate curl command from that
  */
 public class CurlCommand {
+
+    private final Logger logger = LoggerFactory.getLogger(CurlCommand.class);
 
     private String url;
     private final Map<Option, String> options;
@@ -158,19 +163,24 @@ public class CurlCommand {
     public String getCurlCommand() {
         StringBuilder cc = new StringBuilder();
 
+        logger.debug("Generating Curl Command");
+
         // Append key work curl
         cc.append("curl ");
 
         // Adding all Headers to the curl command
         for (Map.Entry<String, String> header : this.headers.entrySet()) {
+            logger.debug(String.format("Setting Header %s with value %s", header.getKey(), header.getValue()));
             cc.append(String.format("%s \"%s: %s\" ", Option.HEADER.value, header.getKey(), header.getValue()));
         }
 
         // Adding all other options to the curl command
         for (Map.Entry<Option, String> option : this.options.entrySet()) {
+            logger.debug(String.format("Setting Option %s with value %s", option.getKey().value, option.getValue()));
             cc.append(String.format("%s %s ", option.getKey().value, option.getValue()));
         }
 
+        logger.debug(String.format("Setting Curl Url as %s", url));
         cc.append(url);
 
         return cc.toString();

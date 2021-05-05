@@ -2,6 +2,8 @@ package com.cs540.curlgen.builder;
 
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import com.cs540.curlgen.models.Option;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.http.HttpRequest;
 import java.util.List;
@@ -12,6 +14,7 @@ import java.util.Map;
  */
 public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
 
+    private final Logger logger = LoggerFactory.getLogger(HttpRequestCurlCommandBuilder.class);
     private final HttpRequest httpRequest;
 
     public HttpRequestCurlCommandBuilder(HttpRequest httpRequest) throws InvalidUrlFormatException {
@@ -27,10 +30,11 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
      */
     @Override
     public void buildHeaders() {
+        logger.debug("Building Headers");
         Map<String, List<String>> headers = this.httpRequest.headers().map();
         for (Map.Entry<String, List<String>> header : headers.entrySet()) {
             for (String value : header.getValue()) {
-
+                logger.debug(String.format("Setting Header %s with Value %s", header.getKey(), value));
                 this.curlCommand.addHeader(header.getKey(), value);
                 // Adding only the first value from the list
                 break;
@@ -45,11 +49,15 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
     public void buildOptions() {
         if (this.httpRequest.timeout().isPresent()) {
             // Set connection timeout option
-            this.curlCommand.addOption(Option.TIMEOUT, String.valueOf(this.httpRequest.timeout().get().toSeconds()));
+            String timeout = String.valueOf(this.httpRequest.timeout().get().toSeconds());
+            logger.debug(String.format("Setting Option %s with Value %s", Option.TIMEOUT, timeout));
+            this.curlCommand.addOption(Option.TIMEOUT, timeout);
         }
 
         // Set the request method type as an option
-        this.curlCommand.addOption(Option.METHOD, this.httpRequest.method());
+        String method = this.httpRequest.method();
+        logger.debug(String.format("Setting Option %s with Value %s", Option.METHOD, method));
+        this.curlCommand.addOption(Option.METHOD, method);
     }
 
     /**

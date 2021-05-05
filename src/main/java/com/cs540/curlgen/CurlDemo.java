@@ -14,6 +14,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URI;
@@ -26,8 +28,11 @@ import java.util.Scanner;
 
 public class CurlDemo {
 
+    private final Logger logger = LoggerFactory.getLogger(CurlDemo.class);
+
     public void userCode() {
         // Java Http Request
+        logger.debug("java HttpRequest Demo");
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://www.google.com"))
@@ -38,20 +43,21 @@ public class CurlDemo {
                 .build();
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
-                .thenAccept(System.out::println)
+                .thenAccept(logger::debug)
                 .join();
 
         try {
             // Create Curl Gen Object using HttpRequestCurlCommandBuilder object to convert the Java HttpRequest Object to curl command
             CurlGen obj = new CurlGen(new HttpRequestCurlCommandBuilder(request));
-            System.out.println(obj.GetCurlCommand());
+            logger.info(String.format("Generated Curl Command: %s", obj.GetCurlCommand()));
         } catch (InvalidUrlFormatException ex) {
-            System.out.println(ex.toString());
+            logger.error(ex.getMessage(), ex);
         }
 
 
         //Apache Http
         try {
+            logger.debug("Apache HttpRequest Demo");
             RequestConfig config = RequestConfig.custom().build();
             CloseableHttpClient httpclient = HttpClients.createDefault();
             HttpUriRequest httpRequest = RequestBuilder.get()
@@ -63,21 +69,23 @@ public class CurlDemo {
 
             CloseableHttpResponse httpResponse = httpclient.execute(httpRequest);
 
-            System.out.println(httpResponse.getStatusLine());
+            logger.debug(String.format("Status: %s", httpResponse.getStatusLine()));
+            StringBuilder sb = new StringBuilder();
             Scanner sc = new Scanner(httpResponse.getEntity().getContent());
             while (sc.hasNext()) {
-                System.out.println(sc.nextLine());
+                sb.append(sc.nextLine());
             }
+            logger.debug(String.format("Response: %s", sb));
 
             // Create Curl Gen Object using ApacheHttpRequestCurlCommandBuilder object to convert the Apache HttpRequest Object to curl command
             CurlGen obj = new CurlGen(new ApacheHttpRequestCurlCommandBuilder(config, httpRequest));
-            System.out.println(obj.GetCurlCommand());
+            logger.info(String.format("Generated Curl Command: %s", obj.GetCurlCommand()));
         } catch (InvalidUrlFormatException | IOException ex) {
-            ex.printStackTrace();
+            logger.error(ex.getMessage(), ex);
         }
 
         // OkHTTP
-        System.out.println("Okhttp");
+        logger.debug("Ok HttpRequest Demo");
         OkHttpClient httpClient = new OkHttpClient();
         Request okHttpRequest = new Request.Builder()
                 .url("http://www.httpbin.org/get")
@@ -98,10 +106,10 @@ public class CurlDemo {
                     Headers responseHeaders = response.headers();
                     int size = responseHeaders.size();
                     for (int i = 0; i < size; i++) {
-                        System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
+                        logger.debug(responseHeaders.name(i) + ": " + responseHeaders.value(i));
                     }
                     assert responseBody != null;
-                    System.out.println(responseBody.string());
+                    logger.debug(responseBody.string());
                 }
             }
         });
@@ -109,9 +117,9 @@ public class CurlDemo {
         try {
             // Create Curl Gen Object using OkhttpRequestCurlCommandBuilder object to convert the Ok HttpRequest Object to curl command
             CurlGen obj = new CurlGen(new OkhttpRequestCurlCommandBuilder(okHttpRequest));
-            System.out.println(obj.GetCurlCommand());
+            logger.info(String.format("Generated Curl Command: %s", obj.GetCurlCommand()));
         } catch (InvalidUrlFormatException ex) {
-            System.out.println(ex.toString());
+            logger.error(ex.getMessage(), ex);
         }
     }
 

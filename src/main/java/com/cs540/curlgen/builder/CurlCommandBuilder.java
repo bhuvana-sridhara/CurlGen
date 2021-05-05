@@ -2,12 +2,15 @@ package com.cs540.curlgen.builder;
 
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import com.cs540.curlgen.models.CurlCommand;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The abstract CurlCommand Builder exposes methods to generate the curl command and ensures the necessary methods are implemented by subclasses
  */
 public abstract class CurlCommandBuilder implements ICurlCommandBuilder {
 
+    private final Logger logger = LoggerFactory.getLogger(CurlCommandBuilder.class);
     protected CurlCommand curlCommand;
 
     public CurlCommandBuilder() {
