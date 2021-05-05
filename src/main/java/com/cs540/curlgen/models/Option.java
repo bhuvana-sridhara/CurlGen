@@ -1,7 +1,7 @@
 package com.cs540.curlgen.models;
 
 public enum Option {
-    HEADER("-H"),
+    COMPRESSED("--compressed"),
     TIMEOUT("--connect-timeout"),
     METHOD("-X"),
     DATA("--data"),
@@ -13,6 +13,7 @@ public enum Option {
     AGENT("--user-agent"),
     COOKIE("--cookie"),
     COOKIE_JAR("--cookie-jar"),
+    COOKIE_NAME("-b"),
     MAX_TIME("--max-time"),
     LOCATION("--location"),
     RETRY_MAX_TIME("--retry-max-time"),
@@ -20,7 +21,16 @@ public enum Option {
     PASS_PHRASE("--pass"),
     OUTPUT_FILE("--output"),
     COMPRESSION_ENABLED("--compressed"),
-    PROXY("--proxy");
+    PROXY("--proxy"),
+    DATA_BINARY("--data-binary"),
+    FORM("-F"),
+    HEADER("-H"),
+    INSECURE("-k"),
+    OUTPUT("-o"),
+    REMOTE_NAME("-O"),
+    HEADER_ONLY("--head"),
+    USER_PWD("-u");
+
 
     public final String value;
 
