@@ -1,9 +1,8 @@
-import com.cs540.curlgen.CurlGen;
-import com.cs540.curlgen.HttpRequestCurlCommandBuilder;
+import com.cs540.curlgen.builder.CurlGen;
+import com.cs540.curlgen.builder.HttpRequestCurlCommandBuilder;
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.opentest4j.AssertionFailedError;
 
 import java.net.URI;
 import java.net.http.HttpClient;

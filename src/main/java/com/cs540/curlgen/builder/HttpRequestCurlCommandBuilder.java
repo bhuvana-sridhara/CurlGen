@@ -1,4 +1,4 @@
-package com.cs540.curlgen;
+package com.cs540.curlgen.builder;
 
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import com.cs540.curlgen.models.Option;
@@ -7,6 +7,9 @@ import java.net.http.HttpRequest;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Curl Command Builder to convert a Java HttpRequest to the Curl Command Object
+ */
 public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
 
     private final HttpRequest httpRequest;
@@ -19,6 +22,9 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
         buildOptions();
     }
 
+    /**
+     * Extract the headers from the Java HttpRequest object and set it to the curl command object
+     */
     @Override
     public void buildHeaders() {
         Map<String, List<String>> headers = this.httpRequest.headers().map();
@@ -32,10 +38,13 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
         }
     }
 
+    /**
+     * Extract the configuration from the OK HttpRequest object and set it to the curl command object
+     */
     @Override
     public void buildOptions() {
         if (this.httpRequest.timeout().isPresent()) {
-            // Add timeout option
+            // Set connection timeout option
             this.curlCommand.addOption(Option.TIMEOUT, String.valueOf(this.httpRequest.timeout().get().toSeconds()));
         }
 
@@ -43,6 +52,11 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
         this.curlCommand.addOption(Option.METHOD, this.httpRequest.method());
     }
 
+    /**
+     * Extract URL from the Java HttpRequest Object and set it to te curl command object
+     *
+     * @throws InvalidUrlFormatException
+     */
     @Override
     public void buildUrl() throws InvalidUrlFormatException {
         this.curlCommand.setUrl(this.httpRequest.uri().toString());

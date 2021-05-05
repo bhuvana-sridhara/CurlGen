@@ -32,3 +32,17 @@ hs_err_pid*
 
 .idea/*
 .gradle/*
+target/*
+build/*
+
+
+
+# bloop and metals
+.bloop
+.bsp
+.metals
+
+
+
+
+
