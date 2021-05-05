@@ -47,6 +47,4 @@ public class HttpRequestCurlCommandBuilder extends CurlCommandBuilder {
     public void buildUrl() throws InvalidUrlFormatException {
         this.curlCommand.setUrl(this.httpRequest.uri().toString());
     }
-
-
 }
