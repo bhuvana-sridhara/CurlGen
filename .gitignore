@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@pramo31 
-bsridh5
-/
-CS540_Bhuvana_Sridhara_Project_CurlGen
-Private
-2
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-CS540_Bhuvana_Sridhara_Project_CurlGen/.gitignore
-@prajwalkk
-prajwalkk Made JUnit test cases work for sbt
-Latest commit a0f9ccb 1 minute ago
- History
- 2 contributors
-@prajwalkk@bsridh5
-60 lines (46 sloc)  724 Bytes
-  
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
@@ -89,16 +58,3 @@ Thumbs.db
 *.yaml
 
 .bsp/
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

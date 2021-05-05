@@ -3,11 +3,13 @@ import com.cs540.curlgen.models.CurlCommand;
 import com.cs540.curlgen.models.Option;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
 import java.time.Duration;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+@RunWith(JUnitPlatform.class)
 public class CurlCommandTest {
 
     @Test

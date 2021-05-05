@@ -10,10 +10,13 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
 import java.io.IOException;
 import java.util.Scanner;
 
+@RunWith(JUnitPlatform.class)
 public class ApacheHttpRequestCurlCommandBuilderTest {
     @Test
     void ApacheHttpTest(){
