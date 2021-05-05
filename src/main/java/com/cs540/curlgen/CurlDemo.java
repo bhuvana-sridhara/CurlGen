@@ -1,12 +1,23 @@
 package com.cs540.curlgen;
 
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
+import org.apache.http.HttpHeaders;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.RequestBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.Scanner;
 
 
 public class CurlDemo {
@@ -30,6 +41,32 @@ public class CurlDemo {
             System.out.println(obj.GetCurlCommand());
         } catch (InvalidUrlFormatException ex) {
             System.out.println(ex.toString());
+        }
+
+
+        //Apache Http
+        try {
+            RequestConfig config = RequestConfig.custom().build();
+            CloseableHttpClient httpclient = HttpClients.createDefault();
+            HttpUriRequest httpRequest = RequestBuilder.get()
+                    .setUri("http://www.google.com")
+                    .setHeader(HttpHeaders.CONTENT_TYPE, "application/json")
+                    .setHeader("test", "one")
+                    .setHeader("test", "two")
+                    .build();
+
+            CloseableHttpResponse httpResponse = httpclient.execute(httpRequest);
+
+            System.out.println(httpResponse.getStatusLine());
+            Scanner sc = new Scanner(httpResponse.getEntity().getContent());
+            while (sc.hasNext()) {
+                System.out.println(sc.nextLine());
+            }
+
+            CurlGen obj = new CurlGen(new ApacheHttpRequestCurlCommandBuilder(config, httpRequest));
+            System.out.println(obj.GetCurlCommand());
+        } catch (InvalidUrlFormatException | IOException ex) {
+            ex.printStackTrace();
         }
     }
 
