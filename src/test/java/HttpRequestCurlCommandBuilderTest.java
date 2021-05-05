@@ -3,6 +3,8 @@ import com.cs540.curlgen.HttpRequestCurlCommandBuilder;
 import com.cs540.curlgen.exceptions.InvalidUrlFormatException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 import org.opentest4j.AssertionFailedError;
 
 import java.net.URI;
@@ -10,7 +12,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
-
+@RunWith(JUnitPlatform.class)
 public class HttpRequestCurlCommandBuilderTest {
     @Test
     void HttpRequestTest(){

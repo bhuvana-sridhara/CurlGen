@@ -5,9 +5,12 @@ import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
+@RunWith(JUnitPlatform.class)
 public class OkhttpRequestCurlCommandBuilderTest {
 
     @Test
