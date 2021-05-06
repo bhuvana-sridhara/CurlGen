@@ -8,14 +8,14 @@ Automatic cURLcommand generator library
 
 ### Contents
 
-* [Requirements](#markdown-header-requirements)
-* [Building the code](#markdown-header-building-the-code) 
-* [Description](#markdown-header-description)
- 	* [HttpRequest](#markdown-header-query-builder)
-	* [HttpUriRequest](#markdown-header-http-client)
-	* [OkHttpClient](#markdown-header-scala-models)
-* [Components](#markdown-header-components)
-* [Usage](#markdown-header-usage)
+* [Requirements](#requirements)
+* [Building the code](#building-the-code) 
+* [Description](#description)
+ 	* [HttpRequest](#query-builder)
+	* [HttpUriRequest](#http-client)
+	* [OkHttpClient](#scala-models)
+* [Components](#components)
+* [Usage](#usage)
 
 ### Requirements
 * [Intellij](https://www.jetbrains.com/idea/)
@@ -35,7 +35,7 @@ Run the following from the command line -
 
 CurlGen provides a programmatic way to generate cURL commands from native requests. This library can be included in any Java project and can generate cURL commands automatically from HTTP requests. The user can also manually specify URL, headers, options etc if they wish and generate a cURL command manually.
 
-The library makes use of the _builder_ design pattern.
+Workflow diagram of the library.
 
 ![alt_text](https://i.postimg.cc/NMVpyhLV/Screen-Shot-2021-05-05-at-5-52-15-PM.png)
 
@@ -47,11 +47,15 @@ The library offers support for the following :
 
 ### Components
 The main components of the library are defined as follows:
-To jump straight to usage, click [here](#markdown-header-usage)!
+To jump straight to usage, click [here](#usage)!
+
+The library makes use of the _builder_ design pattern.
+
+![alt_text](Documents/images/uml.png)
 
 #### CurlGen
 
-This class helps in the process required to construct the cURL commands in a specific order. The order in which the different parts of the cURL commmand is directed by CUrlGen. The final cURL command is still returned by the CurlCommandBuilder. Client will use this class and pass the respective builder to generate and fetch the cURL command.
+This class helps in the process required to construct the cURL commands in a specific order. The order in which the different parts of the cURL command is directed by CUrlGen. The final cURL command is still returned by the CurlCommandBuilder. Client will use this class and pass the respective builder to generate and fetch the cURL command.
 
 #### CurlCommand:
 
