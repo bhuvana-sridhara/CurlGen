@@ -38,7 +38,6 @@ public class CurlDemo {
                 .uri(URI.create("http://www.google.com"))
                 .headers("key_1", "value_1", "key_2", "value_2")
                 .header("test", "one")
-                .header("test", "two")
                 .timeout(Duration.ofMillis(1000))
                 .build();
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
