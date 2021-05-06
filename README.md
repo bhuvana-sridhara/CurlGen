@@ -37,6 +37,8 @@ CurlGen provides a programmatic way to generate cURL commands from native reques
 
 The library makes use of the _builder_ design pattern.
 
+![alt_text](https://i.postimg.cc/NMVpyhLV/Screen-Shot-2021-05-05-at-5-52-15-PM.png)
+
 The library offers support for the following :
 
 * HttpRequest (https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpRequest.html)
