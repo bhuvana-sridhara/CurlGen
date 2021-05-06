@@ -51,7 +51,7 @@ To jump straight to usage, click [here](#usage)!
 
 The library makes use of the _builder_ design pattern.
 
-![alt_text](Documents/images/uml.png)
+![alt_text](Documents/images/uml.PNG)
 
 #### CurlGen
 
